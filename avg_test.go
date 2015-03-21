@@ -23,6 +23,15 @@ var (
 		"....7....4...5..",
 		".........7..9...",
 	}
+
+	pic2 =  []string{
+                "0..0...1....",
+                ".....1...1..",
+                "0..0...1....",
+                "2..3....A..A",
+                "......4....9",
+                "6..5........",
+        }
 )
 
 func Test1(t *testing.T) {
@@ -31,6 +40,11 @@ func Test1(t *testing.T) {
 		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)
 	}
 	fig = avg.ToFig(pic1)
+	t.Logf("%v", fig)
+	if len(fig) != 5 {
+		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)
+	}
+	fig = avg.ToFig(pic2)
 	t.Logf("%v", fig)
 	if len(fig) != 5 {
 		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)

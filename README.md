@@ -18,11 +18,10 @@ Usage:
         }
         fig := avg.ToFig(pic)
 
-where pic is a vector of strings. The returned value is a
-vector of Shapes, where each Shape has a kind (Dot, Line,
-Curve, Circle, Square) and a list of points. The example
-above will create a square, a circle, a (closed) curve, a dot
-and a line.
+The returned value is a vector of Shapes, where each Shape
+has a kind (Dot, Line, Curve, Circle, Square) and a list of
+points. The example above will create a square, a circle, a
+(closed) curve, a dot and a line.
 
 You can have upto 58 shapes in a figure. The rules are as follows:
 
