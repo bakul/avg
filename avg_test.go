@@ -1,8 +1,6 @@
 package avg
 
 import (
-	"avg"
-	//"fmt"
 	"testing"
 )
 
@@ -35,16 +33,16 @@ var (
 )
 
 func Test1(t *testing.T) {
-	fig := avg.ToFig(pic)
+	fig := ToFig(pic)
 	if len(fig) != 1 {
 		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)
 	}
-	fig = avg.ToFig(pic1)
+	fig = ToFig(pic1)
 	t.Logf("%v", fig)
 	if len(fig) != 5 {
 		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)
 	}
-	fig = avg.ToFig(pic2)
+	fig = ToFig(pic2)
 	t.Logf("%v", fig)
 	if len(fig) != 5 {
 		t.Errorf("expected %d, got %d:\n%v", len(pic), len(fig), fig)
